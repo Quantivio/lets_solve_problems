@@ -1,6 +1,16 @@
 # Leet Code Problem: Two Sum
 # Link: https://leetcode.com/problems/two-sum/
 # Complexity: Easy
+# Description: Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+
+"""
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+Example:
+    Given nums = [2, 7, 11, 15], target = 9,
+    Because nums[0] + nums[1] = 2 + 7 = 9,
+    return [0, 1].
+"""
+
 import sys
 from time import perf_counter
 
@@ -65,14 +75,12 @@ class TwoSum:
                 return [index, numbers.index(balance)]
             elif balance in numbers[(index + 1) :] and balance == numbers[index]:
                 numbers[index] = 0
-                if balance == 0:
+                if (
+                    balance == 0
+                ):  # if balance is 0 then we need to find the second 0 in the list
                     numbers[index] = 1
                 return [index, numbers.index(balance)]
         return []
-
-
-# @staticmethod
-# def two_sums_solution_two():
 
 
 if __name__ == "__main__":
@@ -80,7 +88,7 @@ if __name__ == "__main__":
 
     start = perf_counter()
     result_dual_for_loop = TwoSum.two_sums_solution_for_loop(
-        numbers=gen_list, target=19999
+        numbers=gen_list, target=19997
     )
     print("Result with dual for loop", result_dual_for_loop)
     end = perf_counter()
@@ -94,7 +102,7 @@ if __name__ == "__main__":
     print(f"Time taken with recursion: {recursion_end - recursion_start}")
 
     enumerate_start = perf_counter()
-    result_enumerate = TwoSum.two_sums_enumerate(numbers=[0, 4, 3, 0], target=0)
+    result_enumerate = TwoSum.two_sums_enumerate(numbers=gen_list, target=19997)
     print("Result with enumerate", result_enumerate)
     enumerate_end = perf_counter()
 
