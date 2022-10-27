@@ -79,7 +79,9 @@ if __name__ == "__main__":
     gen_list: list[int] = list(range(0, 10000))
 
     start = perf_counter()
-    result_dual_for_loop = TwoSum.two_sums_solution_for_loop(numbers=gen_list, target=19999)
+    result_dual_for_loop = TwoSum.two_sums_solution_for_loop(
+        numbers=gen_list, target=19999
+    )
     print("Result with dual for loop", result_dual_for_loop)
     end = perf_counter()
     print(f"Time taken dual for loop: {end - start}")
