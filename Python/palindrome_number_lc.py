@@ -10,9 +10,10 @@ Example:
     Output: true
     Because 121 reads the same from rtl as from ltr.
 """
+from time import perf_counter
 
 
-class Solution:
+class PalindromNumber:
     @staticmethod
     def palindrome_without_string_function(number: int):
         """
@@ -41,3 +42,27 @@ class Solution:
             if number[index] != number[-(index + 1)]:
                 return False
         return True
+
+
+if __name__ == "__main__":
+    start = perf_counter()
+    print(
+        "Result with indexing", PalindromNumber.palindrome_without_string_function(121)
+    )
+    end = perf_counter()
+    print(f"Time taken with indexing: {end - start}")
+
+    recursion_start = perf_counter()
+    print(
+        "Result with reversed function",
+        PalindromNumber.palindrome_with_reversed_function(121),
+    )
+    recursion_end = perf_counter()
+
+    print(f"Time taken with reversed function: {recursion_end - recursion_start}")
+
+    enumerate_start = perf_counter()
+    print("Result with loop", PalindromNumber.palindrome_with_loop(121))
+    enumerate_end = perf_counter()
+
+    print(f"Time taken with loop: {enumerate_end - enumerate_start}")
