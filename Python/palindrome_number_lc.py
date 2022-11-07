@@ -13,7 +13,7 @@ Example:
 from time import perf_counter
 
 
-class PalindromNumber:
+class PalindromeNumber:
     @staticmethod
     def palindrome_without_string_function(number: int):
         """
@@ -47,7 +47,7 @@ class PalindromNumber:
 if __name__ == "__main__":
     start = perf_counter()
     print(
-        "Result with indexing", PalindromNumber.palindrome_without_string_function(121)
+        "Result with indexing", PalindromeNumber.palindrome_without_string_function(121)
     )
     end = perf_counter()
     print(f"Time taken with indexing: {end - start}")
@@ -55,14 +55,14 @@ if __name__ == "__main__":
     recursion_start = perf_counter()
     print(
         "Result with reversed function",
-        PalindromNumber.palindrome_with_reversed_function(121),
+        PalindromeNumber.palindrome_with_reversed_function(121),
     )
     recursion_end = perf_counter()
 
     print(f"Time taken with reversed function: {recursion_end - recursion_start}")
 
     enumerate_start = perf_counter()
-    print("Result with loop", PalindromNumber.palindrome_with_loop(121))
+    print("Result with loop", PalindromeNumber.palindrome_with_loop(121))
     enumerate_end = perf_counter()
 
     print(f"Time taken with loop: {enumerate_end - enumerate_start}")
