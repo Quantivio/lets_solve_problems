@@ -1,3 +1,17 @@
+# Leet Code Problem: Make The String Great
+# Link: https://leetcode.com/problems/make-the-string-great/
+# Complexity: Easy
+# Description: Given a string s of lower and upper case English letters remove all the
+# adjacent characters that are the same but have different cases.
+
+
+"""
+Example:
+    Input: "leEeetcode"
+    Output: "leetcode"
+    Explanation: In the first step, either you choose i or j, both will result "leEeetcode" to be reduced to "leetcode".
+"""
+
 from time import perf_counter
 
 
