@@ -1,3 +1,16 @@
+# Leet Code Problem: Remove Duplicates from Sorted Array
+# Link: https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+# Complexity: Easy
+# Description: Given a sorted array nums, remove the duplicates in-place such that each element appear
+# only once and return the new length.
+
+"""
+Example:
+    Input: nums = [1,1,2]
+    Output: 2, nums = [1,2]
+    Explanation: Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively.
+"""
+
 from collections import Counter
 from time import perf_counter
 

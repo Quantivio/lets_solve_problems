@@ -1,3 +1,21 @@
+# Leet Code Problem: Online Stock Span
+# Link: https://leetcode.com/problems/online-stock-span/
+# Complexity: Medium
+# Description: Write a class StockSpanner which collects daily price quotes for some stock, and returns the
+# span of that stock's price for the current day.
+
+"""
+Example:
+    Input: ["StockSpanner","next","next","next","next","next","next","next"], [[],[100],[80],[60],[70],[60],[75],[85]]
+    Output: [null,1,1,1,2,1,4,6]
+    Explanation: For 100 there is no previous price, so the span is 1 because 100 is <= 100.
+    For 80 there is previous price which is 100 so 100 <= 80 condition will fail but 80 <= 80 so the span is 1.
+    For 60 there is previous price which is 60 so 80 <= 80 condition will fail but 60 <= 60 so the span is 1.
+    For 70 there is previous price which is 60 so 60 <= 70 condition will pass so the span becomes 1 and
+    also 70 <= 70 so the span becomes 2.
+    By following this pattern we can find the span for all the prices.
+"""
+
 from time import perf_counter
 
 
