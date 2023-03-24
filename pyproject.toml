@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "problem-solving"
+name = "lets-solve-problems"
 version = "0.1.0"
 description = ""
 authors = ["Vetrichelvan <pythonhub.py@gmail.com>"]
 readme = "README.md"
-packages = [{include = "problem_solving"}]
+packages = [{ include = "lets_solve_problems" }]
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -12,8 +12,8 @@ python = "^3.11"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^2.20.0"
-pylint = {extras = ["quotes"], version = "^2.15.5"}
-black = {extras = ["d"], version = "^22.10.0"}
+pylint = { extras = ["quotes"], version = "^2.15.5" }
+black = { extras = ["d"], version = "^22.10.0" }
 
 [build-system]
 requires = ["poetry-core"]
