@@ -5,6 +5,7 @@ class Candies:
         test_cases = int(input().strip())
         for _ in range(test_cases):
             candies = int(input().strip())
+            print(candies)
             candies_price_list = list(map(int, input().split()))
             if len(candies_price_list) % 2 == 0:
                 for number in candies_price_list:

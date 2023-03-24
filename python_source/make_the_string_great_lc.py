@@ -18,7 +18,7 @@ from time import perf_counter
 class MakeTheStringGreat:
     @staticmethod
     def solution_with_conditioning(base_string: str) -> str:
-        string_list: list[str] = [char for char in base_string]
+        string_list: list[str] = list(base_string)
         index = 0
         while index < len(string_list):
             if (
